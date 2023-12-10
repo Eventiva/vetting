@@ -2,9 +2,9 @@
 # @format
 # -----
 # Project: @eventiva/eventiva
-# File: discord_changelog.yml
-# Path: \.github\workflows\discord_changelog.yml
-# Created Date: Monday, December 4th 2023
+# File: compass.yml
+# Path: \projects\modules\vetting\compass.yml
+# Created Date: Friday, December 8th 2023
 # Author: Jonathan Stevens (Email: jonathan.stevens@eventiva.co.uk, Github: https://github.com/TGTGamer)
 # -----
 # Contributing: Please read through our contributing guidelines. Included are directions for opening
@@ -32,46 +32,25 @@
 #
 # DELETING THIS NOTICE AUTOMATICALLY VOIDS YOUR LICENSE - PLEASE SEE THE LICENSE FILE FOR DETAILS
 # -----
-# Last Modified: 04-12-2023
+# Last Modified: 08-12-2023
 # By: Jonathan Stevens (Email: jonathan.stevens@eventiva.co.uk, Github: https://github.com/TGTGamer)
 # Current Version: 0.0.0
 ###
 
-name: 'Change Report'
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 01 * * 1/2'
-
-jobs:
-  change-report:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          # Use a large enough fetch depth to ensure the action can find the commit history to work with
-          fetch-depth: 250
-
-      - uses: eventiva/change-report@main
-        with:
-          # The destination to post the report to.
-          # "slack" and "discord" are supported
-          destination: 'discord'
-          # Number of days to include into the report
-          days: 2
-          # Slack channel to post the report to.
-          # For Slack it's the name of the channel, without the leading "#",
-          # For Discord it's the channel ID
-          channel: '1181344101971533914, 1175861376711925762'
-        env:
-          # Your OpenAI API key, used to generate the report
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          # Your Slack bot token, used to post the report on behalf of the bot.
-          # Only needed if you're posting to Slack
-          # SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          # Your Slack signing secret, used to verify the request is coming from Slack
-          # Only needed if you're posting to Slack
-          # SLACK_SIGNING_SECRET: ${{ secrets.SLACK_SIGNING_SECRET }}
-          # Your Discord bot token, used to post the report on behalf of the bot.
-          # Only needed if you're posting to Discord
-          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+name: vetting
+id: ari:cloud:compass:2e15fee5-391d-40a0-b7d5-cea6ad3f4f53:component/2f4672a7-62fa-4a3f-8df0-34dde1d6974d/96bf40dd-704a-4efa-8a43-2d5a71172caa
+description: Vetting and Screening for security focused organisations
+configVersion: 1
+typeId: APPLICATION
+fields:
+  tier: 3
+links:
+  - name: null
+    type: REPOSITORY
+    url: https://github.com/Eventiva/vetting
+relationships:
+  DEPENDS_ON: []
+labels:
+  - language:python
+  - source:github
+customFields: null
