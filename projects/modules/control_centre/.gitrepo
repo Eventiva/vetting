@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@github.com:Eventiva/Control-Centre.git
 	branch = develop
-	commit = 8e8bf39eb90378f9d0d2581e1a0526ab3f5bae6a
-	parent = d4dbe8281fd580c9b9710c8216b995790bd03a88
+	commit = 8f92676d1b335c1f4c51999ab9f7f39bc771c8a3
+	parent = 8f92676d1b335c1f4c51999ab9f7f39bc771c8a3
 	method = rebase
 	cmdver = 0.4.6
