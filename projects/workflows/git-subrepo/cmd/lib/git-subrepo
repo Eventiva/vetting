@@ -1,0 +1,23 @@
+# `git subrepo push <subdir>` command:
+command:push() {
+  local branch=
+  command-setup +subdir branch
+
+  subrepo:pull
+  if OK; then
+    subrepo:push
+    if OK; then
+      say "Subrepo '$subdir' pushed to '$subrepo_remote' ($subrepo_branch)."
+    elif [[ $CODE -eq -2 ]]; then
+      say "Subrepo '$subdir' has no new commits to push."
+    elif [[ $CODE -eq 1 ]]; then
+      error-join
+      return "$CODE"
+    else
+      die "Unknown push error code: '$CODE'"
+    fi
+  else
+    say "Failed to pull changes from upstream repository."
+    return 1
+  fi
+}
