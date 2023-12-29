@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@github.com:Eventiva/incident_management.git
 	branch = develop
-	commit = 156e251fc22d157242273e0ce2c45f3b3226cc7d
-	parent = 94d5167f7c8b98ba9369f2cb697ad7f507998439
+	commit = 276ae96827279cb3962098f5bb734b802e264cd7
+	parent = 276ae96827279cb3962098f5bb734b802e264cd7
 	method = rebase
 	cmdver = 0.4.6
