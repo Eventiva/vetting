@@ -21,3 +21,5 @@ jobs:
         git config --global user.email "you@example.com";
         git config --global user.name "Your Name";
     - run: make test
+    - name: Pull latest changes from upstream
+      run: git pull origin master
