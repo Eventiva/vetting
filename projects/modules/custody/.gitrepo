@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@github.com:Eventiva/custody.git
 	branch = develop
-	commit = 73ffce5aa64c6a309afb7d9ce5e4b4ae16cb6b1f
-	parent = e27ab4438fe442c024ec6fbe19beddf66033834f
+	commit = d9dec34a5792f9af6ab14759dccf857c7f392e36
+	parent = d9dec34a5792f9af6ab14759dccf857c7f392e36
 	method = rebase
 	cmdver = 0.4.6
